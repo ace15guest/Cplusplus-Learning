@@ -15,8 +15,11 @@ int main(){
     int cat_count{15}; // init to 15
 
     int domestic_animal {dog_count + cat_count};
-  
+    
+    // This will throw an error    int narrowing_conversion {2.9}
+    // This wll not throw an error which is dangerous int narrowing_conversion (2.9)
     cout << "Domestic Animals: " << domestic_animal << endl;
+    cout << sizeof(domestic_animal) << endl;
 
     return 0;
 }

@@ -3,14 +3,14 @@
 	"tasks": [
 		{
 			"type": "cppbuild",
-			"label": "Build With GCC 11.3.0",
-			"command": "C:\\mingw64\\bin\\g++.exe",
+			"label": "C/C++: cpp build active file",
+			"command": "/usr/bin/cpp",
 			"args": [
+				"-fdiagnostics-color=always",
 				"-g",
-				"-std=c++11",
-				"${worskpaceFolder}\\..\\*.cpp",
+				"${file}",
 				"-o",
-				"${fileDirname}\\rooster.exe"
+				"${fileDirname}/${fileBasenameNoExtension}"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
@@ -18,49 +18,11 @@
 			"problemMatcher": [
 				"$gcc"
 			],
-			"group": "build",
-			"detail": "compiler: C:\\mingw64\\bin\\g++.exe"
-		},
-		{
-			"type": "cppbuild",
-			"label": "Build with Clang 14.0.3",
-			"command": "C:\\mingw64\\bin\\clang++.exe",
-			"args": [
-				"-g",
-				"-std=c++11",
-				"${worskpaceFolder}\\..\\*.cpp",
-				"-o",
-				"${fileDirname}\\rooster.exe"
-			],
-			"options": {
-				"cwd": "${fileDirname}"
+			"group": {
+				"kind": "build",
+				"isDefault": true
 			},
-			"problemMatcher": [
-				"$gcc"
-			],
-			"group": "build",
-			"detail": "compiler: C:\\mingw64\\bin\\clang++.exe"
-		},
-		{
-			"type": "cppbuild",
-			"label": "Build With MSVC",
-			"command": "cl.exe",
-			"args": [
-				"/Zi",
-				"/std:c++11",
-				"/EHsc",
-				"/Fe:",
-				"${fileDirname}\\rooster.exe",
-				"${worskpaceFolder}\\..\\*.cpp"			
-			],
-			"options": {
-				"cwd": "${fileDirname}"
-			},
-			"problemMatcher": [
-				"$msCompile"
-			],
-			"group": "build",
-			"detail": "compiler: cl.exe"
+			"detail": "compiler: /usr/bin/cpp"
 		}
 	]
 }

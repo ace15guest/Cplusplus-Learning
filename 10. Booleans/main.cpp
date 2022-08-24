@@ -12,6 +12,12 @@ int main(){
     else{
         cout << "GO!" << endl;
     }
+    if(green_light){
+        cout << "GOOOOOO"<< endl;
+    }
+    else{
+        cout << "STOP NOOOO" << endl;
+    }
 
     return 0;
 }

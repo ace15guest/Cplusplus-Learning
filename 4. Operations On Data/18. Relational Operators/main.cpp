@@ -3,26 +3,15 @@
 using namespace std;
 
 int main(){
-    bool red_light {true};
-    bool green_light {false};
+   int num1 {30};
+   int num2 {13};
 
-    if (red_light == true){
-        cout << "STOP!" << endl;
-    }
-    else{
-        cout << "GO!" << endl;
-    }
-    if(green_light){
-        cout << "GOOOOOO"<< endl;
-    }
-    else{
-        cout << "STOP NOOOO" << endl;
-    }
-    cout << green_light << endl; // 0
+   cout << boolalpha;
 
-    cout << boolalpha;
-
-    cout << green_light << endl; // False
+   cout << "num1 < num2: " << (num1<num2) << endl;
+   cout << "num1 <= num2: " << (num1<=num2) << endl;
+   cout << "num1 == num2: " << (num1==num2) << endl;
+   cout << "num1 != num2: " << (num1!=num2) << endl;
 
     return 0;
 }

@@ -3,26 +3,19 @@
 using namespace std;
 
 int main(){
-    bool red_light {true};
-    bool green_light {false};
+    int value {5};
+    value = value + 1;
 
-    if (red_light == true){
-        cout << "STOP!" << endl;
-    }
-    else{
-        cout << "GO!" << endl;
-    }
-    if(green_light){
-        cout << "GOOOOOO"<< endl;
-    }
-    else{
-        cout << "STOP NOOOO" << endl;
-    }
-    cout << green_light << endl; // 0
+    cout << "Value: " << value << endl;
+    
+    value = 5;
+    cout << "The value is (postfix): " << value++ << endl;
+    cout << "The value is: " << value << endl;
+    cout << "" << endl;
+    value = 5;
+    cout << "The value is (prefix): " << ++value << endl;
 
-    cout << boolalpha;
 
-    cout << green_light << endl; // False
 
     return 0;
 }

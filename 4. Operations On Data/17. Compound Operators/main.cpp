@@ -3,26 +3,27 @@
 using namespace std;
 
 int main(){
-    bool red_light {true};
-    bool green_light {false};
+    int value (45);
 
-    if (red_light == true){
-        cout << "STOP!" << endl;
-    }
-    else{
-        cout << "GO!" << endl;
-    }
-    if(green_light){
-        cout << "GOOOOOO"<< endl;
-    }
-    else{
-        cout << "STOP NOOOO" << endl;
-    }
-    cout << green_light << endl; // 0
+    cout << "The value is: " << value << endl;
 
-    cout << boolalpha;
+    value +=5;
 
-    cout << green_light << endl; // False
+    cout << "The value is +=: " << value << endl;
+
+    value -= 5;
+
+    cout << "The value is -=: " << value << endl;
+
+    value *= 5;
+
+    cout << "The value is *=: " << value << endl;
+
+    value /= 5;
+    cout << "The value is: /=" << value << endl;
+
+    value %=5;
+    cout << "The value is: %=" << value << endl;
 
     return 0;
 }

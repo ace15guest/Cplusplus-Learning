@@ -3,26 +3,17 @@
 using namespace std;
 
 int main(){
-    bool red_light {true};
-    bool green_light {false};
-
-    if (red_light == true){
-        cout << "STOP!" << endl;
-    }
-    else{
-        cout << "GO!" << endl;
-    }
-    if(green_light){
-        cout << "GOOOOOO"<< endl;
-    }
-    else{
-        cout << "STOP NOOOO" << endl;
-    }
-    cout << green_light << endl; // 0
-
-    cout << boolalpha;
-
-    cout << green_light << endl; // False
+    int a {6};
+    int b {4};
+    int c {5};
+    int d {1};
+    int e {2};
+    int f {3};
+    
+    int res = a+b*c-d/e-f+a; //6+20-0-3+6
+    cout << res << endl;
+    int res2 = d/e;
+    cout << res2 << endl; //0
 
     return 0;
 }

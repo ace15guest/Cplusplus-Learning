@@ -3,26 +3,25 @@
 using namespace std;
 
 int main(){
-    bool red_light {true};
-    bool green_light {false};
-
-    if (red_light == true){
-        cout << "STOP!" << endl;
-    }
-    else{
-        cout << "GO!" << endl;
-    }
-    if(green_light){
-        cout << "GOOOOOO"<< endl;
-    }
-    else{
-        cout << "STOP NOOOO" << endl;
-    }
-    cout << green_light << endl; // 0
+    bool a {true};
+    bool b {false};
+    bool c {true};
+    bool d {false};
 
     cout << boolalpha;
 
-    cout << green_light << endl; // False
+    cout << "T and F: " <<(a && b) << endl;
+    cout << "T and T: " <<(a && c) << endl;
+    cout << "F and F: " <<(d && b) << endl;
+
+    cout << "T or F: " <<(a || b) << endl;
+    cout << "T or T: " <<(a || c) << endl;
+    cout << "F or F: " <<(d || b) << endl;
+
+    cout << "Not T : " <<(!a) << endl;
+    cout << "Not F: "  <<(!b) << endl;
+    cout << "Not (F and F): " <<!(d && b) << endl;
+    
 
     return 0;
 }

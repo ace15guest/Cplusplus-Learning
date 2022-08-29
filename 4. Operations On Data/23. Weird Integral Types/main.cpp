@@ -3,26 +3,25 @@
 using namespace std;
 
 int main(){
-    bool red_light {true};
-    bool green_light {false};
+//Integral types less than 4 bytes in size don't suport arithmatic operations
+short int var1 {10}; // 2 bytes
+short int var2 {20};
 
-    if (red_light == true){
-        cout << "STOP!" << endl;
-    }
-    else{
-        cout << "GO!" << endl;
-    }
-    if(green_light){
-        cout << "GOOOOOO"<< endl;
-    }
-    else{
-        cout << "STOP NOOOO" << endl;
-    }
-    cout << green_light << endl; // 0
+char var3 {40}; // 1 byte
+char var4 {50};
 
-    cout << boolalpha;
+cout << sizeof(var1) << endl;
+cout << sizeof(var2) << endl;
+cout << sizeof(var3) << endl;
+cout << sizeof(var4) << endl;
 
-    cout << green_light << endl; // False
+auto result1 = var1 + var2;
+auto result2 = var3 + var4;
 
-    return 0;
+cout << sizeof(result1) << endl;
+cout << sizeof(result2) << endl;
+
+return 0;
+
+
 }

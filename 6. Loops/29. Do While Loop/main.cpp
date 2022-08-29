@@ -4,10 +4,12 @@ using namespace std;
 
 int main(){
     unsigned int a {9};
-    while (a >2){
+
+    do{
+        cout << "Doing It Man" << endl;
         a--;
-        cout << a << endl;
     }
+    while (a >2);
 
     return 0;
 }

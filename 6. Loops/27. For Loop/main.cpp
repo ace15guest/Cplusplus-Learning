@@ -3,26 +3,13 @@
 using namespace std;
 
 int main(){
-    bool red_light {true};
-    bool green_light {false};
-
-    if (red_light == true){
-        cout << "STOP!" << endl;
-    }
-    else{
-        cout << "GO!" << endl;
-    }
-    if(green_light){
-        cout << "GOOOOOO"<< endl;
-    }
-    else{
-        cout << "STOP NOOOO" << endl;
-    }
-    cout << green_light << endl; // 0
-
-    cout << boolalpha;
-
-    cout << green_light << endl; // False
+  for (unsigned int i{}; i < 10; ++i){
+    cout << "My name is Asa " << i << endl;
+  }
+  cout << endl;
+  for (unsigned int i{}; i < 10; i++){
+    cout << "My name is Asa " << i << endl;
+  }
 
     return 0;
 }

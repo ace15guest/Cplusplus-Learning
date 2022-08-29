@@ -1,28 +1,30 @@
+
 #include <iostream>
 
-using namespace std;
 
 int main(){
-    bool red_light {true};
-    bool green_light {false};
 
-    if (red_light == true){
-        cout << "STOP!" << endl;
-    }
-    else{
-        cout << "GO!" << endl;
-    }
-    if(green_light){
-        cout << "GOOOOOO"<< endl;
-    }
-    else{
-        cout << "STOP NOOOO" << endl;
-    }
-    cout << green_light << endl; // 0
+	int number1 {75};
+    int number2 {60};
+    bool result = (number1 < number2);//Expression yielding the condition
 
-    cout << boolalpha;
+    std::cout << std::endl;
+	std::cout << "Nesting if statements" << std::endl;
+	
+    bool red = false;
+    bool green {true};
+    bool yellow {false};
+    bool police_stop{true};
+     std::cout << std::endl;
+	 std::cout << "Police officer stops(less verbose)" << std::endl;
+	 if(green && !police_stop){
+         std::cout << "Go" << std::endl;
+     }else{
+         std::cout << "Stop" << std::endl;
+     }
 
-    cout << green_light << endl; // False
+
+    
 
     return 0;
 }

@@ -3,26 +3,11 @@
 using namespace std;
 
 int main(){
-    bool red_light {true};
-    bool green_light {false};
+int max {};
+int a {4};
+int b {10};
 
-    if (red_light == true){
-        cout << "STOP!" << endl;
-    }
-    else{
-        cout << "GO!" << endl;
-    }
-    if(green_light){
-        cout << "GOOOOOO"<< endl;
-    }
-    else{
-        cout << "STOP NOOOO" << endl;
-    }
-    cout << green_light << endl; // 0
+max = (a>b) ? a:b; // Ternary operator
 
-    cout << boolalpha;
-
-    cout << green_light << endl; // False
-
-    return 0;
+cout << max << endl;
 }

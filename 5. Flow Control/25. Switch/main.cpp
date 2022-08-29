@@ -3,26 +3,31 @@
 using namespace std;
 
 int main(){
-    bool red_light {true};
-    bool green_light {false};
+    const int red_light {0};
+    const int green_light {1};
+    const int yellow_light {2};
 
-    if (red_light == true){
-        cout << "STOP!" << endl;
-    }
-    else{
-        cout << "GO!" << endl;
-    }
-    if(green_light){
-        cout << "GOOOOOO"<< endl;
-    }
-    else{
-        cout << "STOP NOOOO" << endl;
-    }
-    cout << green_light << endl; // 0
+    int color {red_light};
 
-    cout << boolalpha;
-
-    cout << green_light << endl; // False
+    switch (color)
+    {
+        case red_light:{
+            cout << "STOP!" << endl;
+        }
+        break;
+        
+        case green_light: {
+            cout << "GO!" << endl;
+        }
+        break;
+        case yellow_light: {
+            cout << "SLOW!" << endl;
+        }
+        break;
+    
+    default:
+        break;
+    }
 
     return 0;
 }

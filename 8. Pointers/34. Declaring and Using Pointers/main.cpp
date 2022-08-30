@@ -18,9 +18,9 @@ int main(){
     int *p_int{&int_var};
     cout << "int_var value -- memory location: " << int_var << " -- " << p_int << endl;
 
-    //Dereferencing Pointers 
+    //Dereferencing Pointers (Reading something at a memory location)
     int* p_int2 {nullptr};
     int int_data {56};
     p_int2 = &int_data;
-    cout << "Value of pointer: " << *p_int2 << endl;
+    cout << "Value at memory location: " << *p_int2 << endl;
 }

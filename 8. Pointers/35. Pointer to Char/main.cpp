@@ -3,24 +3,28 @@
 using namespace std;
 
 int main(){
-    // + - % / 
-    // Addition
-    int num1 = 2;
-    int num2 = 15;
-    int res1 = num1 + num2;
-    // Substraction
-    int res2 = num1-num2;
-    // Divide
-    int res3 =num2/num1;
-    // Multiplication
-    int res4=num1*num2;
-    // Modulus 
-    int res5= num2%num1;
-    cout << "res1: " << res1 << endl;
-    cout << "res2: " << res2 << endl;
-    cout << "res3: " << res3 << endl;
-    cout << "res4: " << res4 << endl;
-    cout << "res5: " << res5 << endl;
+    char *p_char_var {nullptr};
+    char char_var {'A'};
+    p_char_var = &char_var;
+
+    cout << "The value in p_char_var is: " << *p_char_var << endl;
+    
+    char char_var2 {'c'};
+    p_char_var = &char_var2;
+    cout << "The value in p_char_var is: " << *p_char_var << endl;
+
+    // Initialize with string literal
+
+    const char *p_message {"Hello World!"};
+    cout << "*p_message (dereferenced) points to the first character when referecing the pointer: " << *p_message << endl;
+    cout << "p_message shows the whole message: " << p_message << endl;
+    cout << "&p_message shows the memory location: " << &p_message << endl;
+
+    char message[] {"Hello World"};
+    message[0]= 'B';
+    cout << "message: " << message << endl;
+
+
 
     return 0;
 }

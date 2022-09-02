@@ -23,6 +23,8 @@ int *p_number7 {new int {23}};
  cout << "p_number6: " << p_number6 << endl;
  cout << "*p_number6: " << *p_number6 << endl;
 
+//Only call delete ONCE!
+
  delete p_number4;
  p_number4 = nullptr;
 

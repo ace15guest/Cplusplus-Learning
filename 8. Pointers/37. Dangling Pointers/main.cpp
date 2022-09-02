@@ -3,24 +3,32 @@
 using namespace std;
 
 int main(){
-    // + - % / 
-    // Addition
-    int num1 = 2;
-    int num2 = 15;
-    int res1 = num1 + num2;
-    // Substraction
-    int res2 = num1-num2;
-    // Divide
-    int res3 =num2/num1;
-    // Multiplication
-    int res4=num1*num2;
-    // Modulus 
-    int res5= num2%num1;
-    cout << "res1: " << res1 << endl;
-    cout << "res2: " << res2 << endl;
-    cout << "res3: " << res3 << endl;
-    cout << "res4: " << res4 << endl;
-    cout << "res5: " << res5 << endl;
+    // A dangling pointer is a pointer that is pointing to an invalid address that results in undefined behavior
 
-    return 0;
+    //Unitialized pointer
+    int * p_number;
+
+    cout << "Case 1, Unitialized pointer\n p_number: "<< *p_number<<endl;
+
+    //Deleted Pointer
+    int *p_number1 {new int{67}};
+    cout << "Case 2 deleted pointer: \n";
+    cout << "p_number1 before delete: " << *p_number1 << endl;
+    delete p_number1;
+    cout << "p_number1 after delete: " << *p_number1 << endl; // junk value
+
+
+    // Multiple Pointers pointing to the same memory
+
+    cout << "Case 3, Multiple pointers pointing to the same address\n";
+    int *p_number3 {new int{83}};
+    int *p_number4 {p_number3};
+
+    cout << "p_number3 - " << p_number3 << " - " << *p_number3 << endl;
+    cout << "p_number4 - " << p_number4 << " - " << *p_number4 << endl;
+
+    delete p_number3;
+    // Undefined behavior because p_#3 deleedmemory
+    cout << "p_number4 after deleting p3- " << p_number4 << " - " << *p_number4 << endl;
+
 }
